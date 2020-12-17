@@ -2,11 +2,13 @@
 import './App.css';
 import React, {useState} from 'react';
 import { FormControl,Button, InputLabel, Input } from '@material-ui/core';
+import Message from './Message';
 
 function App() {
 
   const [input,setInput] = useState('');
   const [messages,setMessages] = useState(['heloo','hi','dfndjdf']);
+  const [username,setUsername] = useState('');
   console.log(input);
   console.log(messages);
 
@@ -39,7 +41,8 @@ function App() {
      {/* {message themselves} */}
      {
        messages.map(message =>(
-         <p>{message}</p>
+         <Message  text={message}/>
+        
   ))
      }
     </div>
